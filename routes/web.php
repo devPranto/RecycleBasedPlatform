@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 */
 Route::get('/','PagesController@index');
+Route::get('/pay','PagesController@pay')->name('pay');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
