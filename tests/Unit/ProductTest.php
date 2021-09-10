@@ -42,7 +42,6 @@ class ProductTest extends TestCase
         $this->login(1);
         $product = new ProductController;
         $request = new Request;
-
         $request->replace([
             'item'=>'tester',
             'desc'=>'lots of stuffs',
@@ -56,6 +55,16 @@ class ProductTest extends TestCase
         ]);
 
     }
+    public function testDelete(){
+        $product = new ProductController;
+        $productId=2;
+        $response=$product->destroy($productId);
+        $this->assertDatabaseMissing('products', [
+            'id'=>$productId
+        ]);
+
+    }
+
     protected function login($id){
         Session::start();
         $user = User::find($id);
