@@ -66,7 +66,13 @@ class ProductController extends Controller
     {
         //
         $product=Product::find($id);
-        return view('products.show')->with('product',$product);
+        if($product->user_id===auth()->user()->id){
+            return view('products.show')->with('product',$product);
+        }
+        else{
+            return "Pori Moni";
+        }
+
     }
 
     /**

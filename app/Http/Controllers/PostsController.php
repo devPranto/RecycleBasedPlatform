@@ -64,7 +64,12 @@ class PostsController extends Controller
     public function show($id)
     {
         $post=Post::find($id);
-        return view('posts.show')->with('post',$post);
+        if($post->user_id==auth()->user()->id){
+            return view('posts.show')->with('post',$post);
+        }else{
+            return "Pori Moni";
+        }
+
     }
 
     /**

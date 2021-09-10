@@ -12,7 +12,7 @@
 
                 <li style="width: 270px; float: left; display: block;">
                     <article class="box">
-                        <figure> <a href="/products/{{$item->id}}" class="hover-effect popup-gallery"><img width="270" height="160" alt="" src="https://i.imgur.com/JN2wkb6.jpg" draggable="false"></a> </figure>
+                        <figure> <a href="/products/{{$item->id}}" class="hover-effect popup-gallery"><img width="270" height="160" alt="" src="/pic.jpg" draggable="false"></a> </figure>
                         <div class="details"> <span class="price"> <small>Price</small>
                         @if ($item->free==1)
                             Free

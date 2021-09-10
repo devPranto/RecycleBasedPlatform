@@ -24,6 +24,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/products/create">Post Advertisement</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/chatify#">Chat</a>
+                </li>
 
             </ul>
 
