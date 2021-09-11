@@ -70,7 +70,7 @@ class ProductController extends Controller
             return view('products.show')->with('product',$product);
         }
         else{
-            return "Pori Moni";
+            return " <h1>You Don't Have Authority to EDIT/Delete</h1> ";
         }
 
     }

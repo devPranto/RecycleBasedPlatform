@@ -67,7 +67,7 @@ class PostsController extends Controller
         if($post->user_id==auth()->user()->id){
             return view('posts.show')->with('post',$post);
         }else{
-            return "Pori Moni";
+            return "<h1>You Don't Have Authority to EDIT/Delete</h1>";
         }
 
     }
